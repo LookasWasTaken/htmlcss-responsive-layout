@@ -22,9 +22,6 @@
     height: 250px;
 }
 
-section{
-    height: 2000px;
-}
 
 .height{
     height: 100px;
@@ -86,6 +83,11 @@ a{
     width: 100%;
 }
 
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
 .btn_blue{
     text-align: center;
     background-color: var(--secondary);
@@ -96,6 +98,19 @@ a{
 
 .btn_blue > a{
     color: var(--light);
+}
+
+.btn_purple{
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    width: 8%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.bg_white{
+    background-color: var(--light);
 }
 
 /* #region header */
@@ -144,10 +159,6 @@ nav > .container-lg > .col_6:last-of-type > a > i{
     margin-bottom: 2rem;
 }
 
-/* .demo > .container > .row > .col_12:first-child{
-    padding-bottom: -15rem;
-} */
-
 .text{
     width: 80%;
     margin: auto;
@@ -156,18 +167,13 @@ nav > .container-lg > .col_6:last-of-type > a > i{
     align-items: flex-start;
 }
 
-.text p{
+.text > p{
     line-height: 2.5;
 }
 
-.text h2{
+.text > h2{
     color: var(--secondary);
     margin-top: 2rem;
-}
-
-.phone > img{
-    width: 100%;
-    vertical-align: middle;
 }
 
 .card{
@@ -180,7 +186,7 @@ nav > .container-lg > .col_6:last-of-type > a > i{
     padding-bottom: 2rem;
 }
 
-.card i, h2{
+.card i, .card h2{
     color: var(--secondary);
     margin-top: 2rem;
 }
@@ -188,6 +194,46 @@ nav > .container-lg > .col_6:last-of-type > a > i{
 .card p{
     line-height: 2.5;
     text-align: center;
+}
+
+.planning{
+    padding: 2rem 0;
+}
+
+.planning img{
+    width: 70%;
+}
+
+.planning > .container > .row:first-child{
+    margin-top: 5rem;
+}
+
+.plan_a{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.plan_b{
+    border-radius: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.planning h2, .planning p{
+    color: var(--light);
+}
+
+.plan_b h2, .plan_b p{
+    color: var(--dark);
+}
+
+.plan_b p{
+    font-style: italic;
 }
 
 /* #endregion main */
