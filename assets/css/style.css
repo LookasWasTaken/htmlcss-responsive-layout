@@ -1,324 +1,648 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-primary)
 }
 
-/* Utility */
 
-:root{
+:root {
     --font-primary: 'PT Sans', sans-serif;
     --font-secondary: 'Fredoka', sans-serif;
-    --primary: rgba(151, 146, 228, 1);
-    --secondary: rgba(0, 133, 252, 1);
-    --light: rgba(254, 255, 254, 1);
-    --dark: rgba(50, 51, 50, 1);
+    --primary: #9792e4;
+    --secondary: #0084fd;
+    --light: #ffffff;
+    --dark: #333333;
+    --darker: #151515;
     --lightblue: #b5ddff;
-    --yellow: rgb(224, 176, 55);
+    --yellow: #fdc15f;
 }
 
-/* ###### */
-.debug{
-    height: 250px;
-}
-
-
-.height{
-    height: 100px;
-    background-color: green;
-}
-
-.height2{
-    height: 100px;
-    background-color: red;
-}
-
-.height3{
-    height: 100px;
-    background-color: blue;
-}
-/* ###### */
-
-.flex{
-    display: flex;
-}
-
-#app_header a, #app_main a{
-    text-decoration: none;
-}
-
-#app_footer a{
-    color: var(--primary);
-}
-
-.container{
-    width: 80%;
-    max-width: 1152px;
-    margin: auto;
-}
-
-.container-sm{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 3rem;
-    padding: 3rem 0;
-}
-
-.container-lg{
-    width: 90%;
-    max-width: 1300px;
-    margin: auto;
-}
-
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1rem;
-}
-
-[class^="col_"]{
-    padding: 0 1rem;
-}
-
-.col_6{
-    width: 50%;
-}
-
-.col_12{
-    width: 100%;
-}
-
-img{
-    width: 100%;
+img {
+    max-width: 100%;
     vertical-align: middle;
 }
 
-.btn_blue{
-    text-align: center;
-    background-color: var(--secondary);
-    padding: 0.8rem 5rem;
-    border-radius: 25px;
-    margin-bottom: 2rem;
+ul {
+    list-style: none;
 }
 
-.btn_blue > a{
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#demo,
+section,
+#app_footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+main .row>[class^="col_"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#demo p,
+#demo a,
+#demo .flex>div:last-of-type,
+#benefits .card .btn.md {
+    margin-top: 30px;
+}
+
+main .row>[class^="col_"],
+#demo i.fa-4x {
+    margin-bottom: 30px;
+}
+
+#benefits h2,
+#app_footer .container>p {
+    margin-bottom: 80px;
+}
+
+#planning h3,
+#planning h3+p,
+#testimonials q,
+#benefits .card h4,
+#about .card_quotes q {
+    margin: 25px 0;
+}
+
+#testimonials h2,
+#call_to_action h3,
+#call_to_action h2,
+#call_to_action .btn {
+    margin: 40px 0;
+}
+
+.bg_secondary,
+#app_header,
+#demo i.fa-apple,
+#planning .row>div:first-child,
+#testimonials .card,
+#benefits h2,
+#benefits .card .btn.md,
+#about .card_quotes .btn.sm,
+#call_to_action,
+#app_footer {
     color: var(--light);
 }
 
-.btn_purple{
-    padding: 0.8rem;
-    border-radius: 50%;
-    background-color: var(--primary);
-    width: 8%;
-    text-align: center;
-    margin-bottom: 1rem;
+#testimonials h2,
+#benefits .card .index,
+#benefits .card h4,
+#about h2,
+#about .card_quotes,
+#call_to_action .btn,
+#app_footer .footer_link {
+    color: var(--primary);
 }
 
-.btn_white{
-    padding: 1rem 2.5rem;
-    border-radius: 25px;
-    background-color: var(--light);
-}
-
-.bg_white{
-    background-color: var(--light);
-}
-
-.text_white{
-    color: var(--light);
-}
-
-/* #region header */
-
-#app_header> nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 99;
-    box-shadow: 0 0 5px 0;
-    background-color: var(--secondary);
-}
-
-nav > .container-lg > .col_6{
-    align-items: center;
-}
-
-nav > .container-lg > .col_6:last-of-type{
-    justify-content: flex-end;
-}
-
-nav > .container-lg > .col_6:last-of-type > a > i{
-    color: var(--light);
-}
-
-/* #endregion header */
-
-/* #region main */
-
-#app_main{
-    margin-top: 150px;
-}
-
-.planning, .benefits, .call_to_action{
-    background-color: var(--primary);
-}
-
-.demo > .container > .row > .col_12{
-    background-color: var(--lightblue);
-    border-radius: 25px;
-    margin-bottom: 2rem;
-}
-
-.text{
-    width: 80%;
-    margin: auto;
-    flex-flow: column nowrap;
-    gap: 1.2rem;
-    align-items: flex-start;
-}
-
-.text > p{
-    line-height: 2.5;
-}
-
-.text > h2{
-    color: var(--secondary);
-    margin-top: 2rem;
-}
-
-.card{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: 1.2rem;
-    padding-bottom: 2rem;
-}
-
-.card i, .card h2{
-    color: var(--secondary);
-    margin-top: 2rem;
-}
-
-.card p{
-    line-height: 2.5;
-    text-align: center;
-}
-
-.planning{
-    padding: 2rem 0;
-}
-
-.planning img{
-    width: 70%;
-}
-
-.planning > .container > .row:first-child{
-    margin-top: 5rem;
-}
-
-.plan_a{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 2rem;
-}
-
-.plan_b{
-    border-radius: 50px;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    align-items: center;
-    margin-top: 10rem;
-}
-
-.planning h2, .planning p{
-    color: var(--light);
-}
-
-.plan_b h2, .plan_b p{
+#demo p,
+#benefits p {
     color: var(--dark);
 }
 
-.plan_b p{
-    font-style: italic;
+#planning,
+#testimonials .row .card,
+#benefits,
+#benefits .card .btn.md,
+#about .card_quotes .btn.sm,
+#call_to_action {
+    background-color: var(--primary);
 }
 
-.call_to_action > .container-sm > .row > .col_12{
-    flex-flow: column nowrap;
-    gap: 1.5rem;
+#planning .row>div:last-child .card,
+#planning h3,
+#planning h3+p,
+#benefits .row .card {
+    background-color: var(--light);
+}
+
+#demo p,
+#demo a,
+#testimonials q+span,
+#benefits .card .index,
+#benefits .card h4,
+#benefits .card .btn.md,
+#about .card_quotes q,
+#call_to_action .btn {
+    font-weight: 700;
+}
+
+#testimonials h4,
+#call_to_action h4 {
+    font-weight: 400;
+}
+
+#planning h2,
+#testimonials h2,
+#benefits h2,
+#about h2,
+#about .card_quotes q,
+#call_to_action h3 {
+    font-size: 2rem;
+}
+
+#demo h3,
+#planning h3 {
+    font-size: 1.5rem;
+}
+
+#testimonials h4,
+#testimonials q+span,
+#call_to_action h4,
+#call_to_action .btn {
+    font-size: 1.5rem;
+}
+
+/* #region Utility */
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col_1 {
+    width: calc(100% / 12);
+}
+
+.col_2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col_3 {
+    width: 25%;
+}
+
+.col_4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col_5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col_6 {
+    width: 50%;
+}
+
+.col_7 {
+    width: calc(100% / 12 * 7);
+}
+
+.col_8 {
+    width: calc(100% / 12 * 8);
+}
+
+.col_9 {
+    width: 75%;
+}
+
+.col_10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col_11 {
+    width: calc(100% / 12 * 11);
+}
+
+.col_12 {
+    width: 100%;
+}
+
+.card {
+    padding: 30px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.card.rounded {
+    border-radius: 50px;
+}
+
+.text_center {
     text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.btn.sm {
+    padding: 10px;
+}
+
+.btn.md {
+    padding: 8px 50px;
+}
+
+.btn.big {
+    padding: 15px 100px;
+    border-radius: 40px;
+}
+
+.btn.circle {
+    position: relative;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 0;
+    background-color: var(--primary);
+}
+
+.lighter {
+    background-color: #ffffff;
+    color: var(--darker);
+}
+
+.bg_secondary {
+    background-color: var(--secondary);
+}
+
+/* #endregion Utility */
+
+/* #region Header */
+
+#app_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 25px 0;
+    box-shadow: 0 1px 5px 0 var(--dark);
+}
+
+#app_header .row {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+#app_header nav {
+    display: none;
+}
+
+#app_header ul {
     align-items: center;
 }
 
-.call_to_action h4{
-    opacity: 0.3;
+#app_header li:nth-child(even) {
+    margin: 0 30px;
 }
 
-.call_to_action h2{
+/* #endregion Header */
+
+/* #region Main */
+
+#demo .row .card {
+    background-color: var(--lightblue);
+}
+
+#demo .row .card.flex {
+    padding-bottom: 0;
+}
+
+#demo h3,
+#demo i {
+    color: var(--secondary);
+}
+
+#planning h2 {
+    margin: 60px 0;
+}
+
+#planning .row>div:last-child {
+    margin-bottom: 0;
+}
+
+#planning h3+p {
+    font-style: italic;
+}
+
+#planning .btn.circle>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#testimonials .card img {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#benefits .index {
+    font-size: 2.5rem;
+}
+
+#benefits .card h4 {
+    font-size: 1.6rem;
+}
+
+#about h2 {
+    margin-bottom: 50px;
+}
+
+#about .card_text p {
+    margin: 50px 0;
+    line-height: 40px;
+}
+
+#about .img_wrapper {
+    position: relative;
+}
+
+.pos_abs{
+    position: absolute;
+    top: 0%;
+    right: 15%;
+}
+
+#about .img_wrapper img {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#call_to_action h2 {
     color: var(--yellow);
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
-/* #endregion main */
+#call_to_action .privacy {
+    text-decoration: underline;
+}
 
-/* #region footer */
+/* #endregion Main */
 
-#app_footer{
+/* #region Footer */
+
+#app_footer {
     background-color: var(--dark);
 }
 
-#app_footer p{
-    color: var(--light);
-    text-align: center;
+#app_footer .footer_link {
+    text-decoration: underline;
 }
 
-/* #endregion footer */
+/* #endregion Footer */
 
-/* Responsive */
+/* #region Debug */
 
-@media screen and (min-width:768px)
-{
-    .col_md_4{
+.debug * {
+    outline: 1px solid purple;
+}
+
+.debug [class^="col_"] {
+    height: 100px;
+}
+
+.debug #call_to_action {
+    background-color: var(--primary);
+}
+
+.debug #call_to_action .container {
+    height: 100px;
+}
+
+.debug #app_footer {
+    height: 300px;
+}
+
+.debug #app_footer .container {
+    height: 100%;
+}
+
+/* #endregion Debug */
+
+/* #region Responsive */
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .col_md_1 {
+        width: calc(100% / 12);
+    }
+
+    .col_md_2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    .col_md_3 {
+        width: 25%;
+    }
+
+    .col_md_4 {
         width: calc(100% / 12 * 4);
     }
-    .col_md_6{
-        width: calc(100% / 12 * 6);
-    }
-    .col_md_8{
-        width: calc(100% / 12 * 8);
-    } 
-}
 
-@media screen and (min-width:1160px)
-{
-    .col_lg_4{
-        width: calc(95% / 12 * 4);
-        margin: 1rem 0.5rem;
+    .col_md_5 {
+        width: calc(100% / 12 * 5);
     }
-    .col_lg_6{
-        width: calc(100% / 12 * 6);
+
+    .col_md_6 {
+        width: 50%;
     }
-    .col_lg_8{
-        width: calc(95% / 12 * 8);
-        margin: 1rem 1rem 1rem 0.5rem;
+
+    .col_md_7 {
+        width: calc(100% / 12 * 7);
     }
-    .container-lg{
+
+    .col_md_8 {
+        width: calc(100% / 12 * 8);
+    }
+
+    .col_md_9 {
+        width: 75%;
+    }
+
+    .col_md_10 {
+        width: calc(100% / 12 * 10);
+    }
+
+    .col_md_11 {
+        width: calc(100% / 12 * 11);
+    }
+
+    .col_md_12 {
+        width: 100%;
+    }
+
+    #app_header {
+        padding: 15px 0;
+    }
+
+    #demo .d_flex>div:last-of-type {
+        transform: translate(11.5%, 0);
+    }
+
+    #planning h2,
+    #about h2 {
+        font-size: 4rem;
+    }
+
+    #planning .row .img_wrapper img,
+    #testimonials h2 {
+        margin: 50px 0;
+    }
+
+    #testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    #testimonials .card {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    #testimonials .card img {
         width: 80%;
     }
 
-    .container-sm{
-        width: 60%;
+    #testimonials q {
+        margin-top: 0;
     }
+
+    #benefits h2 {
+        margin-bottom: 50px;
+    }
+
+    #benefits .index {
+        font-size: 4rem;
+    }
+
+    #about .img_wrapper {
+        text-align: center;
+    }
+
+    #about .img_wrapper img {
+        width: 80%;
+    }
+
+    #call_to_action h3 {
+        font-size: 3rem;
+    }
+
+    #call_to_action h2 {
+        font-size: 6rem;
+    }
+
+    #app_footer>.container {
+        width: 55%;
+        max-width: 500px;
+    }
+
 }
+
+@media screen and (min-width: 1160px) {
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .col_lg_1 {
+        width: calc(100% / 12);
+    }
+
+    .col_lg_2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    .col_lg_3 {
+        width: 25%;
+    }
+
+    .col_lg_4 {
+        width: calc(100% / 12 * 4);
+    }
+
+    .col_lg_5 {
+        width: calc(100% / 12 * 5);
+    }
+
+    .col_lg_6 {
+        width: 50%;
+    }
+
+    .col_lg_7 {
+        width: calc(100% / 12 * 7);
+    }
+
+    .col_lg_8 {
+        width: calc(100% / 12 * 8);
+    }
+
+    .col_lg_9 {
+        width: 75%;
+    }
+
+    .col_lg_10 {
+        width: calc(100% / 12 * 10);
+    }
+
+    .col_lg_11 {
+        width: calc(100% / 12 * 11);
+    }
+
+    .col_lg_12 {
+        width: 100%;
+    }
+
+    #app_header nav {
+        display: block;
+    }
+
+    #app_header .menu {
+        display: none;
+    }
+
+    #demo .d_flex>div:last-of-type {
+        transform: translate(0, 0);
+        align-self: flex-end;
+    }
+
+    #demo .d_flex img {
+        width: 65%;
+    }
+
+    #planning .row {
+        align-items: flex-end;
+    }
+
+    #planning h2 {
+        font-size: 2rem;
+    }
+
+    #planning .row .img_wrapper img {
+        margin: 120px 0;
+    }
+
+    #testimonials h2 {
+        font-size: 3rem;
+    }
+
+}
+
+/* #endregion Responsive */
