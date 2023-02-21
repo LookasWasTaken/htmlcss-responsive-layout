@@ -265,6 +265,10 @@ main .row>[class^="col_"],
     background-color: var(--primary);
 }
 
+.about_btn{
+    margin: 1rem 0;
+}
+
 .lighter {
     background-color: #ffffff;
     color: var(--darker);
