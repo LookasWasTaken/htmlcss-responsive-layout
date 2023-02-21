@@ -465,8 +465,8 @@ main .row>[class^="col_"],
         padding: 15px 0;
     }
 
-    #demo .d_flex>div:last-of-type {
-        transform: translate(11.5%, 0);
+    #demo .flex>div:last-of-type {
+        transform: translate(15%, 0);
     }
 
     #planning h2,
@@ -590,12 +590,12 @@ main .row>[class^="col_"],
         display: none;
     }
 
-    #demo .d_flex>div:last-of-type {
+    #demo .flex>div:last-of-type {
         transform: translate(0, 0);
         align-self: flex-end;
     }
 
-    #demo .d_flex img {
+    #demo .flex img {
         width: 65%;
     }
 
