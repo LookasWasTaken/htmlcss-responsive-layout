@@ -372,7 +372,7 @@ main .row>[class^="col_"],
 .pos_abs{
     position: absolute;
     top: 0%;
-    right: 15%;
+    right: 45%;
 }
 
 #about .img_wrapper img {
@@ -511,6 +511,12 @@ main .row>[class^="col_"],
 
     #about .img_wrapper img {
         width: 80%;
+    }
+
+    .pos_abs{
+        position: absolute;
+        top: 0%;
+        right: 15%;
     }
 
     #call_to_action h3 {
