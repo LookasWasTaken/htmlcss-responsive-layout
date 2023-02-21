@@ -405,34 +405,6 @@ main .row>[class^="col_"],
 
 /* #endregion Footer */
 
-/* #region Debug */
-
-.debug * {
-    outline: 1px solid purple;
-}
-
-.debug [class^="col_"] {
-    height: 100px;
-}
-
-.debug #call_to_action {
-    background-color: var(--primary);
-}
-
-.debug #call_to_action .container {
-    height: 100px;
-}
-
-.debug #app_footer {
-    height: 300px;
-}
-
-.debug #app_footer .container {
-    height: 100%;
-}
-
-/* #endregion Debug */
-
 /* #region Responsive */
 
 @media screen and (min-width: 768px) {
